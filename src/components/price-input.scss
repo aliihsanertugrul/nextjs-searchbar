@@ -1,0 +1,38 @@
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .price {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-radius: 70px;
+    padding-left: 1rem;
+  }
+  .dropdown{
+    border: none;
+    outline: none;
+    background-color: #d4a373 ;
+    border-radius: 70px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+    button{
+      border: none;
+      outline: none;
+    }
+    li{
+      cursor: pointer;
+      padding: 5px;
+    }
+}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
