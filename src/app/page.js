@@ -10,14 +10,15 @@ const Home = () => {
   const [maxPrice, setMaxPrice] = useState()
     const [minPrice, setMinPrice] = useState()
     const [color, setColor] = useState()
+    const [sorted, setSorted] = useState("")
   
   return (
     <>
   <SearchBar setFiltered={setFiltered}/>
   <Spacer height={"25px"}/>
-  <PriceInput setMaxPrice={setMaxPrice} setMinPrice={setMinPrice} setColor={setColor}/>
+  <PriceInput setMaxPrice={setMaxPrice} setMinPrice={setMinPrice} setColor={setColor} setSorted={setSorted}/>
   <Spacer height={"50px"}/>
-  <ProductPage filtered={filtered} minPrice={minPrice} maxPrice={maxPrice} color={color}/>
+  <ProductPage filtered={filtered} minPrice={minPrice} maxPrice={maxPrice} color={color} sorted={sorted}/>
   <Spacer height={"50px"}/>
     </>
   )

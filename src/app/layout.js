@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
 import BootstrapProvider from "@/helpers/providers/bootstrap-provider";
 import Navbar from "@/components/navbar";
 import "bootstrap/dist/css/bootstrap.min.css"

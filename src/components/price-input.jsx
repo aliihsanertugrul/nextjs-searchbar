@@ -3,7 +3,7 @@ import React from "react";
 import "./price-input.scss";
 import data from "../helpers/data.json";
 
-const PriceInput = ({ setMaxPrice, setMinPrice, setColor }) => {
+const PriceInput = ({ setMaxPrice, setMinPrice, setColor ,setSorted}) => {
   const handleColor = (e) => {
     setColor(e.target.innerText);
   };
@@ -47,6 +47,9 @@ const PriceInput = ({ setMaxPrice, setMinPrice, setColor }) => {
           ))}
         </ul>
       </div>
+      <button className="btn btn-sort  " onClick={()=>setSorted("asc")}>Asc</button>
+      <button className="btn btn-sort  " onClick={()=>setSorted("desc")}>desc</button>
+
     </div>
   );
 };

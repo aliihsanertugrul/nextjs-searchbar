@@ -6,28 +6,41 @@
 
   .price {
     background-color: transparent;
-    border-radius: 10px;
-    border: 1px solid black;
-    border-radius: 70px;
-    padding-left: 1rem;
-  }
-  .dropdown{
     border: none;
     outline: none;
-    background-color: #d4a373 ;
+    background-color: #faedcd;
+    border-radius: 70px;
+    padding-left: 1rem;
+    height: 35px;
+    width: 150px;
+  }
+  .dropdown {
+    border: none;
+    outline: none;
+    background-color: #faedcd;
     border-radius: 70px;
     -webkit-border-radius: 70px;
     -moz-border-radius: 70px;
     -ms-border-radius: 70px;
     -o-border-radius: 70px;
-    button{
+    button {
       border: none;
       outline: none;
     }
-    li{
+    li {
       cursor: pointer;
       padding: 5px;
     }
+  }
+
+  .btn-sort{
+   
+   background-color: #faedcd;
+   border-radius: 70px;
+   -webkit-border-radius: 70px;
+   -moz-border-radius: 70px;
+   -ms-border-radius: 70px;
+   -o-border-radius: 70px;
 }
 }
 

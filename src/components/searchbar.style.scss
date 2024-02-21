@@ -7,7 +7,9 @@ background-color: #d4a373 ;
 }
 
 .search-container{
-    border: 1px solid black;
+    // border: 1px solid black;
+    background-color: #ccd5ae;
+   
     width: 100%;
     height: 30px;
     border-radius: 70px;
@@ -21,7 +23,7 @@ background-color: #d4a373 ;
     .searchMain{
         height: 100%;
         width: 20%;
-        position: absolute;
+        
         transition: transform 1s linear;
         transform:translate(-500px);
         -webkit-transform:translate(-500px);
@@ -41,7 +43,7 @@ background-color: #d4a373 ;
         outline: none;
         z-index: 1;
         background-color: transparent;
-      
+        
 
         
 

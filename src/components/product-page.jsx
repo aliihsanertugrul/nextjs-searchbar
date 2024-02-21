@@ -2,7 +2,7 @@ import React from "react";
 import data from "../helpers/data.json";
 import ProductCard from "./product-card";
 
-const ProductPage = ({filtered,maxPrice,minPrice,color}) => {
+const ProductPage = ({filtered,maxPrice,minPrice,color,sorted}) => {
    
     let filteredData;
     if(!filtered){
@@ -28,9 +28,16 @@ const ProductPage = ({filtered,maxPrice,minPrice,color}) => {
         filteredData=filteredData.filter((item)=>item?.renk?.join(",").toLowerCase().includes(color.toLowerCase()))
     }
 
+    if(sorted==="desc"){
+      filteredData=filteredData.sort((a,b)=>b.price-a.price)
+    }else if(sorted==="asc"){
+      filteredData=filteredData.sort((a,b)=>a.price-b.price)
+    }
+
    
   return (
     <div className="container">
+      
       <div className="row row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
         <ProductCard data={filteredData}/>
       </div>

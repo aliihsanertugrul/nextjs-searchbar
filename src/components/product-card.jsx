@@ -1,5 +1,7 @@
+"use client"
 import React from "react";
 import "./productCard.scss";
+import { useRouter } from "next/navigation";
 
 const ProductCard = ({ data }) => {
   const [
@@ -16,15 +18,23 @@ const ProductCard = ({ data }) => {
     uyumlu_cihazlar,
     kapasite,
   ] = data;
+  const router=useRouter()
+  const handleCard = (item) => {
+    router.push(`/${item.id}`)
+    console.log(item)
+  }
   return (
     <>
+    
       {data.map((item) => (
-        <div className="col" key={item.id}>
+        <div className="col" key={item.id} onClick={()=>handleCard(item)} >
+          
           <div className="card">
             <div className="card-body">
-              <div className="card-title">{item.ad}</div>
+              <div className="card-title fw-bold">{item.ad}</div>
+              <p>Marka :{item.marka}</p>
               <p>Model :{item.model}</p>
-              <p>Fiyat :${item.price}</p>
+             
               <p>
                 {item.renk ? (
                   // Eğer item.renk varsa, renkleri göster
@@ -34,6 +44,7 @@ const ProductCard = ({ data }) => {
                   ""
                 )}
               </p>
+              <span className="badge text-bg-warning p-2">Fiyat : ${item.price}</span>
             </div>
           </div>
         </div>
